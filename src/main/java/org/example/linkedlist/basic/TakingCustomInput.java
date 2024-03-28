@@ -32,10 +32,10 @@ public class TakingCustomInput {
         return head;
     }
 
-    public static void print(Node<Integer> head){
+    public static void print(Node<Integer> head) {
         Node<Integer> temp = head;
 
-        while(temp != null){
+        while (temp != null) {
             System.out.println(temp.data);
             temp = temp.next;
         }

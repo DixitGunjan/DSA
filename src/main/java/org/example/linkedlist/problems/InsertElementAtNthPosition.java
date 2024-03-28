@@ -43,29 +43,30 @@ public class InsertElementAtNthPosition {
 
         insert(head, 40, 2);
     }
-    public static void insert(Node<Integer> head, int data, int pos){
 
-    Node<Integer> newNode = new Node<>(data);
+    public static void insert(Node<Integer> head, int data, int pos) {
 
-    Node<Integer> tempNode = head;
-    int position = 0;
+        Node<Integer> newNode = new Node<>(data);
 
-    if(pos == 0){
-        newNode.next = head;
-        head = newNode;
+        Node<Integer> tempNode = head;
+        int position = 0;
+
+        if (pos == 0) {
+            newNode.next = head;
+            head = newNode;
+            print(head);
+            return;
+        }
+
+        while (tempNode != null && position < pos - 1)  //prevNode
+        {
+            tempNode = tempNode.next;
+            position++;
+        }
+
+        newNode.next = tempNode.next;
+        tempNode.next = newNode;
+
         print(head);
-        return;
-    }
-
-    while(tempNode !=null && position < pos - 1 )  //prevNode
-    {
-        tempNode = tempNode.next;
-        position++;
-    }
-
-    newNode.next = tempNode.next;
-    tempNode.next  = newNode;
-
-    print(head);
     }
 }

@@ -46,13 +46,13 @@ public class AppenLastNtoFirst {
 
     private static void append2(Node<Integer> head, int i) {
 
-        
+
     }
 
-    public static int length(Node<Integer> head){
+    public static int length(Node<Integer> head) {
         Node<Integer> temp = head;
-        int count =0;
-        while(temp!=null){
+        int count = 0;
+        while (temp != null) {
             count++;
             temp = temp.next;
 
@@ -60,9 +60,9 @@ public class AppenLastNtoFirst {
         return count;
     }
 
-    public static void append(Node<Integer> head , int pos) {
+    public static void append(Node<Integer> head, int pos) {
 
-        if(pos ==0 || head == null) {
+        if (pos == 0 || head == null) {
             print(head);
             return;
         }
@@ -71,16 +71,16 @@ public class AppenLastNtoFirst {
         Node<Integer> newLastNode = head;
         Node<Integer> actualLAst = head;
 
-        for(int i =0;i < len - pos;i++){
-            if(i == (len - pos - 1 ))
-                 newLastNode = newFirstNode;
+        for (int i = 0; i < len - pos; i++) {
+            if (i == (len - pos - 1))
+                newLastNode = newFirstNode;
 
             newFirstNode = newFirstNode.next;
 
         }
 
         Node<Integer> temp = newFirstNode;
-        while(temp != null){
+        while (temp != null) {
             actualLAst = temp;
             temp = temp.next;
         }

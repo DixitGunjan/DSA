@@ -3,23 +3,23 @@ package org.example.linkedlist.basic;
 
 public class IncrementElement {
 
-    public static void incrementElement(Node<Integer> head){
+    public static void incrementElement(Node<Integer> head) {
         Node<Integer> temp = head;
 
-        while(temp != null){
+        while (temp != null) {
             temp.data++;
             temp = temp.next;
         }
     }
 
 
-    public static void print(Node<Integer> head){
+    public static void print(Node<Integer> head) {
 
         Node<Integer> temp = head;
 
         System.out.print("head ->");
 
-        while(temp != null){
+        while (temp != null) {
             System.out.print(temp.data + " -> ");
             temp = temp.next;
         }

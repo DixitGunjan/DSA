@@ -37,7 +37,7 @@ public class ReverseLinkedList {
     }
 
     private static void reverse(Node<Integer> head) {
-        if(head == null){
+        if (head == null) {
             return;
         }
         reverse(head.next);

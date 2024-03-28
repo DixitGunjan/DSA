@@ -2,7 +2,6 @@ package org.example.linkedlist.problems;
 
 import org.example.linkedlist.Node;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class RemoveConsecutiveDuplicates {
@@ -48,11 +47,10 @@ public class RemoveConsecutiveDuplicates {
 
         Node<Integer> tempHead = head;
 
-        while(tempHead.next != null){
-            if(tempHead.data.equals(tempHead.next.data)){
+        while (tempHead.next != null) {
+            if (tempHead.data.equals(tempHead.next.data)) {
                 tempHead.next = tempHead.next.next;
-            }
-            else {
+            } else {
                 tempHead = tempHead.next;
             }
         }

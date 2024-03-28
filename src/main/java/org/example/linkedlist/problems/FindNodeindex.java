@@ -43,13 +43,16 @@ public class FindNodeindex {
 
         find(head, 30);
     }
-    public static void find(Node<Integer> head, int data){
+
+    public static void find(Node<Integer> head, int data) {
 
         Node<Integer> tempNode = head;
         int pos = 0;
-        while(tempNode != null){
-            if(tempNode.data == data){
-                System.out.println("find at pos - "+ pos); break;}
+        while (tempNode != null) {
+            if (tempNode.data == data) {
+                System.out.println("find at pos - " + pos);
+                break;
+            }
 
             tempNode = tempNode.next;
             pos++;

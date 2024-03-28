@@ -6,13 +6,13 @@ public class LinkedListuse {
 
     Node<Integer> head;
 
-    public static void print(Node<Integer> head){
+    public static void print(Node<Integer> head) {
 
         Node<Integer> temp = head;
 
         System.out.print("head ->");
 
-        while(temp != null){
+        while (temp != null) {
             System.out.print(temp.data + " -> ");
             temp = temp.next;
         }

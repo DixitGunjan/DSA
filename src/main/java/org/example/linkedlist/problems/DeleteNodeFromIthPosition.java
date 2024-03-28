@@ -42,24 +42,25 @@ public class DeleteNodeFromIthPosition {
 
         delete(head, 2);
     }
-    public static void delete(Node<Integer> head, int pos){
+
+    public static void delete(Node<Integer> head, int pos) {
 
         Node<Integer> tempNode = head;
         int position = 0;
 
-        if(pos == 0){
+        if (pos == 0) {
             head = tempNode.next;
             print(head);
             return;
         }
 
-        while(tempNode !=null && position < pos - 1 )  //prevNode
+        while (tempNode != null && position < pos - 1)  //prevNode
         {
             tempNode = tempNode.next;
             position++;
         }
 
-        tempNode.next  = tempNode.next.next;
+        tempNode.next = tempNode.next.next;
 
         print(head);
     }

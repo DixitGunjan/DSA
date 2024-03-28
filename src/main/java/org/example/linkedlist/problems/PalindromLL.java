@@ -4,6 +4,7 @@ import org.example.linkedlist.Node;
 
 import java.util.Scanner;
 
+//Needs to be Done Correctly
 public class PalindromLL {
     public static Node<Integer> input() {
 
@@ -36,33 +37,35 @@ public class PalindromLL {
 
 
     }
-    public static int length(Node<Integer> head){
+
+    public static int length(Node<Integer> head) {
         Node<Integer> temp = head;
-        int count =0;
-        while(temp!=null){
+        int count = 0;
+        while (temp != null) {
             count++;
             temp = temp.next;
 
         }
         return count;
     }
+
     private static boolean checkPaLL(Node<Integer> head) {
-       boolean flag = false;
-        if(head == null) return flag;
+        boolean flag = false;
+        if (head == null) return flag;
 
         int length = length(head);
 
-        if(length%2 !=0) return flag;
+        if (length % 2 != 0) return flag;
 
         Node<Integer> secondHalf = head;
         Node<Integer> temp = head;
 
-        for(int i =0; i< length/2 + 1 ;i++){
+        for (int i = 0; i < length / 2 + 1; i++) {
             secondHalf = temp;
             temp = temp.next;
         }
 
-        while(head != null && secondHalf != null) {
+        while (head != null && secondHalf != null) {
             if (head.data == secondHalf.data) flag = true;
 
             System.out.println("head - " + head.data + " second half -" + secondHalf.data);
