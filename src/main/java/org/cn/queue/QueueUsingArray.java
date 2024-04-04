@@ -37,6 +37,9 @@ public class QueueUsingArray {
             front++;
         }
         data[++rear] = element;
+        if (rear == data.length) { //Setting it to zero as Circular Queue will come int o picture
+            rear = 0;
+        }
         size++;
 
     }
@@ -52,8 +55,24 @@ public class QueueUsingArray {
         if (size == 0) {
             throw new QueueEmptyException("Queue Empty");
         }
+        int temp = data[front];
+        front++;
+
+        if (front == data.length) {       //Setting for circular queue
+            front = 0;
+        }
         size--;
-        return data[front++];
+        if (size == 0) {   //If last element is removed set queue to initial Stage
+            front = -1;
+            rear = -1;
+        }
+        return temp;
+    }
+
+    public void print() {
+        for (int i : data) {
+            System.out.println(i);
+        }
     }
 
     public int getFront() {
