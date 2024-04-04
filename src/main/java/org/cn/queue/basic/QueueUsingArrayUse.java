@@ -34,8 +34,7 @@ public class QueueUsingArrayUse {
         System.out.println("IS Queue Empty - " + queue.isEmpty());
 
         /**
-
-        queue.dequeue();
+         queue.dequeue();
         queue.dequeue();
         queue.dequeue();
          To check QueueEmptyException
