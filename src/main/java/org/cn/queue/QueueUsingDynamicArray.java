@@ -3,21 +3,20 @@ package org.cn.queue;
 import org.cn.queue.exceptions.QueueEmptyException;
 import org.cn.queue.exceptions.QueueFullException;
 
-public class QueueUsingArray {
-
+public class QueueUsingDynamicArray {
     private int[] data;
     private int front, rear; //index of element of front and rear of the queue
     private int size; //size of queue
 
-    public QueueUsingArray() {
+    public QueueUsingDynamicArray() {
         data = new int[5];
-        front = -1; //setting it to zero will eman we have value at index 0
+        front = -1; //setting it to zero will mean we have value at index 0
         rear = -1;
     }
 
-    public QueueUsingArray(int capacity) {
+    public QueueUsingDynamicArray(int capacity) {
         data = new int[capacity];
-        front = -1; //setting it to zero will eman we have value at index 0
+        front = -1; //setting it to zero will mean we have value at index 0
         rear = -1;
     }
 
@@ -32,7 +31,7 @@ public class QueueUsingArray {
     public void enqueue(int element) throws QueueFullException {
 
         if (size == data.length)
-            throw new QueueFullException("Queue Full");
+            doubleCapacity(data);
         if (size == 0) {
             front++;
         }
@@ -42,6 +41,23 @@ public class QueueUsingArray {
         }
         size++;
 
+    }
+
+    private void doubleCapacity(int[] data) {
+
+        int[] temp = data;
+        data = new int[2 * temp.length];
+        int index = 0;
+
+        //Copying in FIFO sequence
+        for (int i = front; i < temp.length; i++) {
+            data[index++] = temp[i];
+        }
+        for (int i = 0; i < front - 1; i++) {
+            data[index++] = temp[i];
+        }
+        front = 0;
+        rear = temp.length - 1;
     }
 
     public int front() throws QueueEmptyException {
@@ -82,5 +98,4 @@ public class QueueUsingArray {
     public int getRear() {
         return this.rear;
     }
-
 }
