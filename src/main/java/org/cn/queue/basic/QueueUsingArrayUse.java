@@ -4,6 +4,9 @@ import org.cn.queue.QueueUsingArray;
 import org.cn.queue.exceptions.QueueEmptyException;
 import org.cn.queue.exceptions.QueueFullException;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class QueueUsingArrayUse {
 
     public static void main(String[] args) throws QueueFullException, QueueEmptyException {
@@ -39,7 +42,5 @@ public class QueueUsingArrayUse {
         queue.dequeue();
          To check QueueEmptyException
          */
-
-
     }
 }
