@@ -35,11 +35,9 @@ public class QueueUsingArrayUse {
 
         /**
          queue.dequeue();
-        queue.dequeue();
-        queue.dequeue();
+         queue.dequeue();
+         queue.dequeue();
          To check QueueEmptyException
          */
-
-
     }
 }

@@ -28,11 +28,12 @@ public class QueueUsingLL<T> {
     }
 
     public T dequeue() throws QueueEmptyException {
-        if (size == 0) {
+        if (front == null) {
             throw new QueueEmptyException("Queue is Empty");
         }
         T frontElement = front.data;
         front = front.next;
+        if (front == null) rear = null;
         size--;
         return frontElement;
     }
