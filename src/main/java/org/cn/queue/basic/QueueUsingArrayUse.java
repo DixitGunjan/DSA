@@ -33,6 +33,8 @@ public class QueueUsingArrayUse {
         System.out.println("Size of Queue is - " + queue.size());
         System.out.println("IS Queue Empty - " + queue.isEmpty());
 
+        queue.print();
+
         /**
          queue.dequeue();
          queue.dequeue();

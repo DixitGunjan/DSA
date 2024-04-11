@@ -56,6 +56,7 @@ public class QueueUsingArray {
             throw new QueueEmptyException("Queue Empty");
         }
         int temp = data[front];
+        data[front] = 0;
         front++;
 
         if (front == data.length) {       //Setting for circular queue

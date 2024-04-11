@@ -31,7 +31,9 @@ public class StackUsingArray {
         if (topIndex == -1) {
             throw new StackEmptyException("Stack is Empty");
         }
-        return data[topIndex--]; //returning the data which was removed and decreasing the index
+        int temp = data[topIndex];
+        data[topIndex--] = 0;
+        return temp; //returning the data which was removed and decreasing the index
     }
 
     //O(1)

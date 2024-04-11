@@ -38,7 +38,9 @@ public class StackUsingArrayDoubleCapacity {
         if (topIndex == -1) {
             throw new StackEmptyException("Stack is Empty");
         }
-        return data[topIndex];
+        int temp = data[topIndex];
+        data[topIndex--] = 0;
+        return temp;
     }
 
     //O(1)
