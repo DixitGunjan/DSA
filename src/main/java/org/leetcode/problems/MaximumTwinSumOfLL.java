@@ -1,25 +1,35 @@
 package org.leetcode.problems;
 
 import org.cn.linkedlist.Node;
-//TODO::Complete
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Stack;
+
 public class MaximumTwinSumOfLL {
 
     public static int twinSum(Node<Integer> head) {
 
-        int length = 0;
-        Node<Integer> temp = head;
-        while (temp != null) {
-            length++;
-            temp = temp.next;
-        }
+        List<Integer> resultOfSum = new ArrayList<>();
+        Stack<Integer> stack = new Stack<>();
 
-        for (int i = 0; i < length; i++) {
-            for(int j =0;j<length;j++){
-                if(j== length-1-i){
+        Node<Integer> tempHead = head;
 
-                }
-            }
+        while (tempHead != null) {
+            stack.push(tempHead.data);
+            tempHead = tempHead.next;
         }
-        return 0;
+        int stackSize = stack.size() / 2;
+        while (stack.size() > stackSize) {
+            resultOfSum.add(head.data + stack.pop());
+            head = head.next;
+        }
+        return Collections.max(resultOfSum);
+    }
+
+    public static void main(String[] args) {
+        Node<Integer> head = Node.insert();
+        System.out.println(twinSum(head));
     }
 }
