@@ -1,4 +1,4 @@
-package org.leetcode.problems;
+package org.leetcode.problems.ll;
 
 import org.cn.linkedlist.Node;
 

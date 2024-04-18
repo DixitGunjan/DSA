@@ -1,4 +1,4 @@
-package org.leetcode.problems;
+package org.leetcode.problems.stack;
 
 import org.cn.stacks.StackUsingLL;
 

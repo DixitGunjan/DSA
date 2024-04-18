@@ -1,4 +1,4 @@
-package org.leetcode.problems;
+package org.leetcode.problems.strings;
 
 public class MergingAlternateString {
 
