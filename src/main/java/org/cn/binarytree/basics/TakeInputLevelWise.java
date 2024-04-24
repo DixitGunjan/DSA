@@ -2,6 +2,7 @@ package org.cn.binarytree.basics;
 
 import org.cn.binarytree.BinaryTreeNode;
 
+import javax.swing.*;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -42,8 +43,34 @@ public class TakeInputLevelWise {
         return root;
     }
 
+
+    public static void printLevelWise(BinaryTreeNode<Integer> root) {
+        Queue<BinaryTreeNode<Integer>> queue = new LinkedList<>();
+        if (root == null) {
+            System.out.println("empty tree");
+            return;
+        }
+
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            BinaryTreeNode<Integer> root1 = queue.poll();
+            System.out.print(root1.data + ":");
+
+            if (root1.left != null) {
+                queue.add(root1.left);
+                System.out.print("L:" + root1.left.data +",");
+            }
+            if (root1.right != null) {
+                queue.add(root1.right);
+                System.out.print("R:" + root1.right.data);
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = takeInput();
-        BinaryTreeUsebasic.printTree(root);
+        printLevelWise(root);
     }
 }
