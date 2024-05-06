@@ -18,6 +18,6 @@ public class SymmetricTree {
 
         if (left == null || right == null) return false;
 
-        return isMirror(left.left, right.right) && isMirror(left.right, right.left);
+        return left.data == right.data && isMirror(left.left, right.right) && isMirror(left.right, right.left);
     }
 }
