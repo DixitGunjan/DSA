@@ -11,6 +11,8 @@ public class TakeInputLevelWise {
 
     public static BinaryTreeNode<Integer> takeInput() {
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter Tree Root -");
         int rootData = sc.nextInt();
 
         if (rootData == -1) return null;
@@ -59,7 +61,7 @@ public class TakeInputLevelWise {
 
             if (root1.left != null) {
                 queue.add(root1.left);
-                System.out.print("L:" + root1.left.data +",");
+                System.out.print("L:" + root1.left.data + ",");
             }
             if (root1.right != null) {
                 queue.add(root1.right);
@@ -72,5 +74,23 @@ public class TakeInputLevelWise {
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = takeInput();
         printLevelWise(root);
+        printRecursive(root);
+    }
+
+
+    public static void printRecursive(BinaryTreeNode<Integer> tree) {
+
+        if (tree == null) return;
+        System.out.println(tree.data);
+        if (tree.left != null) {
+            System.out.println(tree.data + "L - " + tree.left.data);
+        }
+
+        if (tree.right != null) {
+            System.out.println(tree.data + "R - " + tree.right.data);
+        }
+
+        printRecursive(tree.left);
+        printRecursive(tree.right);
     }
 }
