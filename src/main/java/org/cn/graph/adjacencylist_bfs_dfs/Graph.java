@@ -83,4 +83,36 @@ public class Graph {
             }
         }
     }
+
+    /**
+     * topological Sort
+     */
+    public void addDirectedEdge(int i, int j) {
+        GraphNode first = nodeList.get(i);
+        GraphNode second = nodeList.get(j);
+        first.neighbours.add(second);
+    }
+
+    public void topologicalSort(GraphNode currNode, Stack<GraphNode> stack) {
+
+        for (GraphNode nodes : currNode.neighbours) {
+            if (!nodes.isVisited) {
+                topologicalSort(nodes, stack);
+            }
+        }
+        currNode.isVisited = true;
+        stack.push(currNode);
+    }
+
+    public void topological() {
+        Stack<GraphNode> graphNodes = new Stack<>();
+        for (GraphNode node : nodeList) {
+            if (!node.isVisited) {
+                topologicalSort(node, graphNodes);
+            }
+        }
+        while (!graphNodes.isEmpty()) {
+            System.out.println(graphNodes.pop().name);
+        }
+    }
 }

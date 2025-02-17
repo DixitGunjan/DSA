@@ -112,4 +112,33 @@ public class Graph {
             }
         }
     }
+
+    /**
+     * topological sort
+     */
+    public void addDirectedEdge(int i, int j) {
+        adjacencyMatrix[i][j] = 1;
+    }
+
+    public void topologicalSort(GraphNode currNode, Stack<GraphNode> stack) {
+        for (GraphNode nodes : getNeighbours(currNode)) {
+            if (!nodes.isVisited) {
+                topologicalSort(nodes, stack);
+            }
+        }
+        currNode.isVisited = true;
+        stack.push(currNode);
+    }
+
+    public void topological() {
+        Stack<GraphNode> graphNodes = new Stack<>();
+        for (GraphNode node : nodeList) {
+            if (!node.isVisited) {
+                topologicalSort(node, graphNodes);
+            }
+        }
+        while (!graphNodes.isEmpty()) {
+            System.out.println(graphNodes.pop().name);
+        }
+    }
 }

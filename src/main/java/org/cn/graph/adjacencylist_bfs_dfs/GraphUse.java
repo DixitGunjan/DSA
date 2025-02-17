@@ -11,20 +11,38 @@ public class GraphUse {
         listNode.add(new GraphNode("C", 2));
         listNode.add(new GraphNode("D", 3));
         listNode.add(new GraphNode("E", 4));
+        listNode.add(new GraphNode("F", 5));
+        listNode.add(new GraphNode("G", 6));
+        listNode.add(new GraphNode("H", 7));
 
-        Graph g = new Graph(listNode);
+        /*Graph g = new Graph(listNode);
 
         g.addUndirectEdge(0, 1);
         g.addUndirectEdge(0, 2);
         g.addUndirectEdge(0, 3);
         g.addUndirectEdge(1, 4);
         g.addUndirectEdge(2, 3);
-        g.addUndirectEdge(3, 4);
+        g.addUndirectEdge(3, 4);*/
 
-        g.print();
+       // g.print();
 //comment either one
-        g.bfs();
+        //g.bfs();
         System.out.println();
-        g.dfs();
+       // g.dfs();
+
+
+        //topological sort
+        Graph g2 = new Graph(listNode);
+        g2.addDirectedEdge(0, 2);
+        g2.addDirectedEdge(2, 4);
+        g2.addDirectedEdge(4, 7);
+        g2.addDirectedEdge(4, 5);
+        g2.addDirectedEdge(5, 6);
+        g2.addDirectedEdge(1, 2);
+        g2.addDirectedEdge(1, 3);
+        g2.addDirectedEdge(3, 5);
+
+        g2.print();
+        g2.topological();
     }
 }
