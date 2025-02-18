@@ -9,6 +9,13 @@ public class WeightedGraph {
         this.nodeList = nodeList;
     }
 
+    public void addDirectedWeightedEdge(int i, int j, int weight) {
+        GraphWeightedNode first = nodeList.get(i);
+        GraphWeightedNode second = nodeList.get(j);
+        first.neighbours.add(second);
+        first.weight.put(second, weight);
+    }
+
     void floyedWarshall() {
         int size = nodeList.size();
         int[][] V = new int[size][size];
