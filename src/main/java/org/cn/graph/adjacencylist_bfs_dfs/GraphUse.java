@@ -24,11 +24,11 @@ public class GraphUse {
         g.addUndirectEdge(2, 3);
         g.addUndirectEdge(3, 4);*/
 
-       // g.print();
+        // g.print();
 //comment either one
         //g.bfs();
         System.out.println();
-       // g.dfs();
+        // g.dfs();
 
 
         //topological sort
