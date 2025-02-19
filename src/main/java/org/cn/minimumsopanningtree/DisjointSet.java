@@ -1,9 +1,10 @@
 package org.cn.minimumsopanningtree;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DisjointSet {
-    private List<GraphWeightedNode> nodeList;
+    private List<GraphWeightedNode> nodeList = new ArrayList<>();
 
     public static void makeSet(List<GraphWeightedNode> nodeList) {
         for (GraphWeightedNode node : nodeList) {

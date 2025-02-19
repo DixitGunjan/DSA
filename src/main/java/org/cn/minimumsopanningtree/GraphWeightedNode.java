@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GraphWeightedNode implements Comparable<GraphWeightedNode> {
+public class GraphWeightedNode {
 
     public String name;
     public List<GraphWeightedNode> neighbours;
@@ -28,10 +28,5 @@ public class GraphWeightedNode implements Comparable<GraphWeightedNode> {
     @Override
     public String toString() {
         return name;
-    }
-
-    @Override
-    public int compareTo(GraphWeightedNode o) {
-        return this.distance - o.distance;
     }
 }
