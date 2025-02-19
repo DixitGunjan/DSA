@@ -21,8 +21,8 @@ public class Prims {
      * 3. set sourcenode to zero
      * 4. create priority queue and all all nodes to pq
      * 5. get al neighbours of ciurr node and check if queue contains neighbour
-     * 6. check if neighbour.distance > currNode.weightMap.get() distance if yes then pls reset the distance and update aprent
-     * 7. loop for printing
+     * 6. (for updating cost of each node)check if neighbour.distance > currNode.weightMap.get() distance if yes then pls reset the distance and update aprent
+     * 7. loop for calcualting cost
      *
      * @param node
      */
