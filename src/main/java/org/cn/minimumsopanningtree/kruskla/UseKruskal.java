@@ -1,4 +1,6 @@
-package org.cn.minimumsopanningtree;
+package org.cn.minimumsopanningtree.kruskla;
+
+import org.cn.minimumsopanningtree.GraphWeightedNode;
 
 import java.util.ArrayList;
 import java.util.List;

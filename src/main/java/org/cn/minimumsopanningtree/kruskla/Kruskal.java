@@ -1,4 +1,8 @@
-package org.cn.minimumsopanningtree;
+package org.cn.minimumsopanningtree.kruskla;
+
+import org.cn.minimumsopanningtree.DisjointSet;
+import org.cn.minimumsopanningtree.GraphWeightedNode;
+import org.cn.minimumsopanningtree.UndirectedEdge;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,8 +27,6 @@ public class Kruskal {
         node2.weight.put(node1, weight);
         node1.neighbours.add(node2);
         node2.neighbours.add(node1);
-
-
         edgeList.add(edge);
     }
 
