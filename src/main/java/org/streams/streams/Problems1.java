@@ -33,7 +33,6 @@ public class Problems1 {
 
         //3. partitioning by even odd
         List<Integer> list = of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
         Map<Boolean, List<Integer>> map = list.stream().collect(partitioningBy(i -> i % 2 == 0));
 
         System.out.println(map);
