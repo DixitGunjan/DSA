@@ -9,8 +9,8 @@ public class TwoSum {
 
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
-        int[] arr = new int[]{2, 7, 11, 15};
-        int target = 22;
+        int[] arr = new int[]{3,2,4};
+        int target = 6;
         //0(n^2)
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
