@@ -31,6 +31,14 @@ public class Problems1 {
         Double average = productsList.stream().mapToDouble(p -> p.price).average().orElse(0);
         System.out.println(average);
 
+        //return second highest price laptop
+        Product product = productsList.stream().sorted(Comparator.comparing(Product::getPrice).reversed()).skip(1).findFirst().get();
+        //else
+        Float price = productsList.stream().map(Product::getPrice).sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
+        Product product1 = productsList.stream().filter(p -> p.price == price).findFirst().get();
+
+        System.out.println(product1.getName() + "-----" + product.getName());
+
         //3. partitioning by even odd
         List<Integer> list = of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         Map<Boolean, List<Integer>> map = list.stream().collect(partitioningBy(i -> i % 2 == 0));
@@ -38,7 +46,7 @@ public class Problems1 {
         System.out.println(map);
 
         //4. Remove Duplicates
-        List<Integer> listOfDuplicates = of(1,1,2,3,3,4,4,4,5,6,7,8);
+        List<Integer> listOfDuplicates = of(1, 1, 2, 3, 3, 4, 4, 4, 5, 6, 7, 8);
 
         List<Integer> finalList = listOfDuplicates.stream().distinct().toList();
 
@@ -50,7 +58,7 @@ public class Problems1 {
         System.out.println(resultMap);
 
         //Sort a list in reverse
-        List<Integer> listInt = of(1,2,3,4,5,6,7,8,9);
+        List<Integer> listInt = of(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
         List<Integer> result1 = listInt.stream().sorted(Comparator.reverseOrder()).toList();
         List<Integer> result2 = listInt.stream().sorted((x, y) -> Integer.compare(y, x)).toList();
