@@ -38,8 +38,8 @@ public class LicenseKey {
     }
 
     public static void main(String[] args) {
-        String s = "5F3Z-2e-9-w";
-        int K = 5;
+        String s = "--a-a-a-a--";
+        int K = 2;
         System.out.println(new LicenseKey().reformat(s, K));
     }
 }

@@ -21,7 +21,10 @@ public class GroupAnagram {
             }
         }
 
+        List<List<String>> results = new ArrayList<>();
+
         for (Map.Entry<String, List<String>> entry : resultMap.entrySet()) {
+            results.add(entry.getValue());
             System.out.println(entry.getValue());
         }
     }
