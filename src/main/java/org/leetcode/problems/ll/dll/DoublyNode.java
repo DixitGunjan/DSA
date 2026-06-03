@@ -35,6 +35,7 @@ public class DoublyNode {
         }
         return head;
     }
+
     public static void printDLL(DoublyNode head) {
         System.out.print("null <--> ");
         while (head != null) {
@@ -43,5 +44,24 @@ public class DoublyNode {
             head = head.next;
         }
         System.out.println("null");
+    }
+
+    public DoublyNode insertBeforeHead(DoublyNode head, int data) {
+        DoublyNode currNode = new DoublyNode(data);
+
+        currNode.prev = null;
+        currNode.next = head;
+        head.prev = currNode;
+        head = currNode;
+
+        return head;
+    }
+
+    public DoublyNode deleteHead(DoublyNode head) {
+        // Your code goes here
+        if (head.next == null) return null;
+        head.next.prev = null;
+        head = head.next;
+        return head;
     }
 }
