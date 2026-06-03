@@ -10,10 +10,11 @@ public class MaxConsecutiveOnes {
             if (j == 1) {
                 tempCount++;
             } else {
-                if (tempCount > maxCount) maxCount = tempCount;
+                maxCount = Math.max(maxCount, tempCount);
                 tempCount = 0;
             }
         }
+        maxCount = Math.max(maxCount, tempCount);
         System.out.println(maxCount);
     }
 }

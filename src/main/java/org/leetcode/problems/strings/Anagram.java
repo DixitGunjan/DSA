@@ -13,11 +13,11 @@ public class Anagram {
 
         Map<Character, Integer> charCount = new HashMap<>();
 
-        for (Character ch : str1.toCharArray()) {
+        for (char ch : str1.toCharArray()) {
             charCount.put(ch, charCount.getOrDefault(ch, 0) + 1);
         }
 
-        for (Character ch : str2.toCharArray()) {
+        for (char ch : str2.toCharArray()) {
             charCount.put(ch, charCount.getOrDefault(ch, 0) - 1);
         }
 

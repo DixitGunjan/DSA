@@ -1,6 +1,7 @@
 package org.tuf.arrays.mediumtab;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class LeadersInArray {
@@ -22,5 +23,16 @@ public class LeadersInArray {
         }
         System.out.println(list);
 
+        //Solution2
+        int currL = arr[arr.length-1];
+        list.clear();;
+        list.add(currL);
+        for(int i = arr.length-2; i >= 0; i--){
+            if(arr[i] > currL){
+                currL = arr[i];
+                list.add(currL);
+            }
+        }
+        System.out.println(list.reversed());
     }
 }
