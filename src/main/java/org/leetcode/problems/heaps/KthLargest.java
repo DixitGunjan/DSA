@@ -3,6 +3,7 @@ package org.leetcode.problems.heaps;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+//Min-heap
 public class KthLargest {
     public static void main(String[] args) {
         int[] arr = {10, 5, 4, 3, 48, 6, 2, 33, 53, 10};
