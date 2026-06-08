@@ -1,3 +1,4 @@
+
 package org.tuf.arrays.mediumtab;
 
 public class MaxConsecutivce1s {
