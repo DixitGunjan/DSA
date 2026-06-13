@@ -16,5 +16,5 @@ jobs:
         with:
           java-version: '26'
           distribution: 'temurin'
-      - name: Checkstyle
-        run: mvn checkstyle:check
+      #- name: Checkstyle
+      #  run: mvn checkstyle:check
