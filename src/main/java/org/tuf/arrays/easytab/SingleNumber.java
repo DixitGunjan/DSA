@@ -14,6 +14,7 @@ public class SingleNumber {
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             if (entry.getValue() == 1) {
                 System.out.println(entry.getKey());
+                break;
             }
         }
     }
