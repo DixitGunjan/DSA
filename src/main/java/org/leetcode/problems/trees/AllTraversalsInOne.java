@@ -45,9 +45,9 @@ public class AllTraversalsInOne {
     private void inOrder(BinaryTreeNode<Integer> root, List<BinaryTreeNode<Integer>> result) {
         if (root == null) return;
 
-        preOrder(root.left, result);
+        inOrder(root.left, result);
         result.add(root);
-        preOrder(root.right, result);
+        inOrder(root.right, result);
     }
 
     //post-order
@@ -60,8 +60,8 @@ public class AllTraversalsInOne {
     private void postOrder(BinaryTreeNode<Integer> root, List<BinaryTreeNode<Integer>> result) {
         if (root == null) return;
 
-        preOrder(root.left, result);
-        preOrder(root.right, result);
+        postOrder(root.left, result);
+        postOrder(root.right, result);
         result.add(root);
     }
 }
