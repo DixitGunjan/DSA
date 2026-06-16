@@ -15,4 +15,13 @@ public class BinaryTreeNode<T> {
         this.left = left;
         this.right = right;
     }
+
+    @Override
+    public String toString() {
+        return "BinaryTreeNode{" +
+                "data=" + data +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
+    }
 }
