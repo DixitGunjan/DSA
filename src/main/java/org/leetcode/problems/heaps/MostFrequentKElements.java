@@ -19,7 +19,7 @@ public class MostFrequentKElements {
             frequencyMap.put(n, frequencyMap.getOrDefault(n, 0) + 1);
         }
 
-        PriorityQueue<Integer> queue = new PriorityQueue<>(Comparator.comparing(frequencyMap::get));
+        PriorityQueue<Integer> queue = new PriorityQueue<>(Comparator.comparingInt(frequencyMap::get));
 
         for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
             queue.offer(entry.getKey());
