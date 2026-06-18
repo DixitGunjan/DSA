@@ -4,7 +4,7 @@ public class ReverseString {
     public static void main(String[] args) {
 
 
-        String str = "abcdefg";
+        String str = "abcdefgh";
         char[] c = str.toCharArray();
         int endC = str.length() - 1;
         int i = 0;
