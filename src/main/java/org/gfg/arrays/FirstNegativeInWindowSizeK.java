@@ -8,6 +8,27 @@ public class FirstNegativeInWindowSizeK {
         int[] arr = {12, -1, -7, 8, -15, 30, 16, 28};
         int k = 3;
         System.out.println(firstN(arr, k));
+        System.out.println(firstNBF(arr, k));
+    }
+
+    //BruteForce
+    private List<Integer> firstNBF(int[] arr, int k) {
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < arr.length - k + 1; i++) {
+            int zero = -1;
+            for (int j = i; j < i + k; j++) {
+                if (arr[j] < 0) {
+                    zero = j;
+                    break;
+                }
+            }
+            if (zero == -1) {
+                result.add(0);
+            } else {
+                result.add(arr[zero]);
+            }
+        }
+        return result;
     }
 
     private List<Integer> firstN(int[] arr, int k) {
