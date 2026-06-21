@@ -1,4 +1,4 @@
-package org.gfg.arrays;
+package org.random_generated.arrays;
 
 import java.util.ArrayList;
 import java.util.List;

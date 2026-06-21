@@ -1,4 +1,4 @@
-package org.gfg.arrays;
+package org.random_generated.arrays;
 
 public class EqualSubstringsWithingBudget {
     void main() {

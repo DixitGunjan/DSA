@@ -1,6 +1,4 @@
-package org.gfg.arrays;
-
-import java.util.Arrays;
+package org.random_generated.arrays;
 
 public class MoveAllDigitsToEnd {
     void main() {

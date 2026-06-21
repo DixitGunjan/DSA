@@ -1,8 +1,4 @@
-package org.gfg.arrays;
-
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.stream.IntStream;
+package org.random_generated.arrays;
 
 public class RestaurantQueueBalancer {
     void main() {
