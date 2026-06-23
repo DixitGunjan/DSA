@@ -18,7 +18,6 @@ public class CompressStrings {
         }
         for (int i = 1; i < str.length(); i++) {
             char cur = str.charAt(i);
-
             if (ch == cur) {
                 count++;
             } else {
