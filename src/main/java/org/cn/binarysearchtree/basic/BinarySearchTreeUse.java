@@ -26,7 +26,7 @@ public class BinarySearchTreeUse {
     }
 
 
-    private static BinarySearchTreeNode<Integer> insertIntoBST(BinarySearchTreeNode<Integer> currNode, int data) {
+    public static BinarySearchTreeNode<Integer> insertIntoBST(BinarySearchTreeNode<Integer> currNode, int data) {
 
         if (currNode == null) {
             currNode = new BinarySearchTreeNode<>(data);

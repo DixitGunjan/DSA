@@ -22,6 +22,6 @@ public class DeleteMidNodeofLL {
             fast = fast.next.next;
         }
 
-        prev.next = prev.next.next;
+        prev.next = slow.next;
     }
 }
